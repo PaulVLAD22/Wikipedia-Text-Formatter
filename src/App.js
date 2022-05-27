@@ -6,6 +6,7 @@ import {
   useColorModeValue,
   VStack,
   Center,
+  HStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import DarkModeButton from "./DarkModeButton";
@@ -54,7 +55,7 @@ function App() {
           value={text}
           onChange={handleInputChange}
         ></Textarea>
-        <Flex justifyContent={"space-around"} w="100%">
+        <HStack justifyContent={"space-around"} w="100%">
           <Button
             onClick={() => {
               setText(formatText(text, setError));
@@ -79,7 +80,7 @@ function App() {
           >
             Copy to Clipboard
           </Button>
-        </Flex>
+        </HStack>
       </VStack>
     </Center>
   );
